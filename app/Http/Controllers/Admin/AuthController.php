@@ -14,7 +14,17 @@ class AuthController extends Controller
         // dd(Hash::Make('asdfg123'));
 
         if(!empty(Auth::check())){
-            return redirect('admin/dashboard');
+            if (Auth::user()->user_type==1) {
+
+                return redirect('admin/dashboard');
+            }else if (Auth::user()->user_type==0) {
+
+                return redirect('student/dashboard');
+            }else if (Auth::user()->user_type==2) {
+                
+                return redirect('teacher/dashboard');
+
+            }
         }
             return view('auth.login');
 
@@ -26,8 +36,17 @@ class AuthController extends Controller
         // $remember = !empty($request->remember)? ture : false;
 
         if(Auth::attempt(['email' => $request->email, 'password' => $request->password], true)){
-    
-            return redirect('admin/dashboard');
+            if (Auth::user()->user_type==1) {
+
+                return redirect('admin/dashboard');
+            }else if (Auth::user()->user_type==0) {
+
+                return redirect('student/dashboard');
+            }else if (Auth::user()->user_type==2) {
+
+                return redirect('teacher/dashboard');
+
+            }
 
     
     }else
