@@ -57,6 +57,9 @@
 									<li><a href="error-500.html">500 Error </a></li>
 								</ul>
 							</li>
+							<li> 
+								<a href="{{ url('logout')}}"><i class="fe fe-star-o"></i> <span>Logout</span></a>
+							</li>
 							
 						
 						</ul>
