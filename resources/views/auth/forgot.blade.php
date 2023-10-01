@@ -40,26 +40,20 @@
                         </div>
                         <div class="login-right">
 							<div class="login-right-wrap">
-								<h1>Login</h1>
+								<h1>Reset Password </h1>
 								<p class="account-subtitle">Access to our dashboard</p>
-								@include('validate.validate')
-								
 								<!-- Form -->
-								<form action="{{url('login')}}" method="POST">
+								<form action="" method="POST">
 									@csrf
 									<div class="form-group">
-										<input name="email" class="form-control" type="text" placeholder="Email">
+										<input name="email" class="form-control" type="email" placeholder="Email">
 									</div>
 									<div class="form-group">
-										<input name=password class="form-control" type="text" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<button class="btn btn-primary btn-block" type="submit">Login</button>
+										<button class="btn btn-primary btn-block" type="submit">Reset</button>
 									</div>
 								</form>
 								<!-- /Form -->
-								
-								<div class="text-center forgotpass"><a href="{{url('forgotpassword')}}">Forgot Password?</a></div>
+                                
 								<div class="login-or">
 									<span class="or-line"></span>
 									<span class="span-or">or</span>

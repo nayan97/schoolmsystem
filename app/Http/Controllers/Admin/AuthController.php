@@ -61,4 +61,15 @@ class AuthController extends Controller
     Auth::logout();
     return redirect('/');
    }
+
+   // forgot password
+
+   public function forgotPassword(){
+      return view('auth.forgot');
+    }
+
+    
+   public function postforgotPassword(Request $request){
+    dd($request->all());
+  }
 }
