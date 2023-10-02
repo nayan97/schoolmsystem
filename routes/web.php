@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ClassesController;
 use App\Http\Controllers\Admin\DashboardController;
 
 /*
@@ -31,6 +32,7 @@ Route::post('/forgotpassword',[AuthController::class,'postforgotpassword']);
 Route::group(['middleware => admin'],function (){
     Route::get('/admin/dashboard',[DashboardController::class,'dashboard']);
     Route::resource('/admin/admin',AdminController::class);
+    Route::resource('/admin/classes',ClassesController::class);
 
        
     });
