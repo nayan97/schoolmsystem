@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ClassesController;
+use App\Http\Controllers\Admin\SubjectController;
 use App\Http\Controllers\Admin\DashboardController;
 
 /*
@@ -33,6 +34,9 @@ Route::group(['middleware => admin'],function (){
     Route::get('/admin/dashboard',[DashboardController::class,'dashboard']);
     Route::resource('/admin/admin',AdminController::class);
     Route::resource('/admin/classes',ClassesController::class);
+    Route::resource('/admin/subject',SubjectController::class);
+
+    Route::get('/admin/subject/delete/{id}',[SubjectController::class,'delete']);
 
        
     });

@@ -16,6 +16,9 @@
 							<li> 
 								<a href="{{url('/admin/classes')}}"><i class="fe fe-layout"></i> <span>All class</span></a>
 							</li>
+							<li> 
+								<a href="{{url('/admin/subject')}}"><i class="fe fe-layout"></i> <span>All Subject</span></a>
+							</li>
 							@elseif (Auth::user()->user_type ==0)
 							<li class="active"> 
 								<a href="{{url('/student/dashboard')}}"><i class="fe fe-home"></i> <span>Dashboard</span></a>

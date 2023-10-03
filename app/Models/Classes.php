@@ -16,10 +16,10 @@ class Classes extends Model
         $return=Classes::select('classes.*', 'users.name as created_by_name')
                     ->join('users', 'users.id', 'classes.created_by');
 
-                    if(!empty(Request::get('name')))
-                    {
-                        $return=$return->where('classes.name', 'like','%' .Request::get('name').'%');
-                    }
+                    // if(!empty(Request::get('name')))
+                    // {
+                    //     $return=$return->where('classes.name', 'like','%' .Request::get('name').'%');
+                    // }
                     
 
 
